@@ -1,0 +1,154 @@
+<!--estrutura HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GMdev | Portfólio</title>
+</head>
+<!--tudo que vai no <body> é o corpo estrutural da página-->
+<body>
+  <!--div são elementos de bloco que podem conter outros elementos-->
+     <div class="particulas"></div>
+
+
+<!--menu de navegação parte de cima do site-->
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link"> Início </a>
+            </li>
+    
+        
+            <li>
+                <a href="#sobre"  class="menu-link"> Sobre </a>
+            </li>
+        
+        
+            <li>
+                <a href="#projetos"  class="menu-link"> Projetos </a>
+            </li>
+        
+        
+            <li>
+                <a href="#contatos" class="menu-link"> Contato </a>
+            </li>
+            <li>
+                
+                <a href="img/CurrículoP.pdf" class="menu-link" download> Baixar Currículo </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Cabeçalho -->
+    <main id="inicio" class="cabecalho">
+          
+            <img src="img/fotocapa.jpeg" alt="foto de Gian" class="foto-perfil">
+            <h1>Gian Marco</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Front End</p>
+          
+    </main>
+<!-- Seção Sobre Mim -->
+     <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo"> Sobre Mim </h2>
+        <div class="sobre-caixa">
+
+          <p class="sobre-paragrafo"> Olá! Sou um desenvolvedor front-end apaixonado por criar experiências web únicas  memoráveis. combino codigo limpo com design moderno para desenvolver sites que não só funcionam perfeitamente, mas também impressionam visualmente. estou no  mercado a procura de novas oportunidades para crescer e me desenvolver como programador front-end e back-end, me especializando cada dia  mais para isso.
+          </p>
+
+       </div>
+     </section>
+     <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo"> Linguagens que eu trabalho</h2>
+        <div class="linguagens">
+
+      
+            
+             <img src="img/html.png" alt="HTML">
+        <img src="img/css.webp" alt="CSS">
+        <img src="img/java.png" alt="JavaScript">
+        <img src="img/php.png" alt="php">
+
+       
+
+       </div>
+     </section>
+<!-- Seção de Linguagens -->
+ 
+
+<!-- Seção de Projetos -->
+       <section id="projetos" class="projetos">
+            <h2 class="projetos-titulo">Meus Projetos</h2>
+              <div class="projetos-caixa">
+                 
+                <div class="projetos-card">
+                    <img src= "img/projeto1.png" alt="Projeto1" class="projetos-imagem"> 
+
+                     <div class="caixa-textos-projeto">
+                        <h3 class="info-projetos">Loja de Carros</h3>
+                        <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e     design respansivo para uma loja de carros de luxo.</p>
+                     </div>
+                  </div>
+<!-- Projeto 2 -->
+                <div class="projetos-card">
+                    <img src= "img/projeto2.png" alt="Projeto2" class="projetos-imagem"> 
+                    
+                    <div class="caixa-textos-projeto">
+
+                    
+                        <h3 class="info-projetos"> Pagina de Viagens </h3>
+                    
+                        <p class="paragrafo-projetos"> Uma página interativa com roteiros de viagem mais cobiçados do mundo.</p>
+
+                    </div>
+                  </div>
+<!-- Projeto 3 -->
+                <div class="projetos-card">
+                    <img src= "img/projeto3.png" alt="Projeto3" class="projetos-imagem"> 
+                   <div class="caixa-textos-projeto">
+                     <h3 class="info-projetos"> Microsoft</h3>
+                     <p class="paragrafo-projetos"> Página da Microsoft criada para demonstrar conhecimentos com diversas tecnologias. </p>
+                    </div>
+                  </div>
+
+              </div>
+        </section>
+          <!-- Seção de Contatos -->
+         <section id="contatos" class="contatos">
+              <h2 class="contatos-titulo"> Entre em Contato</h2>
+              <form class="formulario-contato" id="formulario" onsubmit="enviarwhatsapp(event)">
+               
+                <div class="grupo-form">
+                 
+                    <input placeholder="Nome" class="campo-form" id="nome">
+                </div>
+
+                <div class="grupo-form">
+                <textarea class="campo-form"  placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="botao-form"> Enviar Whatsapp</button>
+
+              </form>
+         </section> 
+
+         <script>
+              // Função para enviar mensagem via WhatsApp
+              function enviarwhatsapp(event) {
+                   event.preventDefault() // Impede o envio do formulário padrão
+
+                    // Obtém os valores dos campos de entrada
+                  const nome = document.getElementById('nome').value;
+                  const mensagem = document.getElementById('mensagem').value;
+                  const telefone = '5551996462021'; // Substitua pelo seu número de telefone
+                  const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+                  const msgFormatada = encodeURIComponent(texto);
+                  const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
+                  window.open(url, '_blank');
+              }
+       
+        
+         </script>
+</body>
+</html>
+
