@@ -168,6 +168,7 @@ margin-bottom: 20px;
   height: 200px;
   width: 100%;
   object-fit: cover;
+ 
   
 }
 
@@ -180,9 +181,7 @@ margin-bottom: 20px;
   overflow: hidden;
   transition: all 0.5s ease;
   cursor: pointer;
-  width: 100%;
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Mantém a cor do texto */
+ 
 }
 
 
@@ -193,6 +192,7 @@ margin-bottom: 20px;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+
 }
 
 /* Caixa de informações do projeto */
