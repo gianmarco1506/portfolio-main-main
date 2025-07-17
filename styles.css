@@ -1,100 +1,94 @@
 /** Reset CSS */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Smooth scrolling */
-html{
-    scroll-behavior: smooth;
-    
-
+html {
+  scroll-behavior: smooth;
 }
 
 /* Root variables for colors */
-:root{
-     --primaria: #4f46e5;
-     --secundaria: #7c3aed; 
-     --escuro: #0f172a;
-     --maisescuro: #0a0f1c;
-     --claro: #e2e8f0;
-     --vidro: rgba(255, 255, 255, 0.1);
+:root {
+  --primaria: #4f46e5;
+  --secundaria: #7c3aed;
+  --escuro: #0f172a;
+  --maisescuro: #0a0f1c;
+  --claro: #e2e8f0;
+  --vidro: rgba(255, 255, 255, 0.1);
 }
 
 /* Body styles */
-body{
-    background-color: var(--escuro);
-    color: var(--claro);
+body {
+  background-color: var(--escuro);
+  color: var(--claro);
 }
 
 /* Navigation styles */
-.navegacao{
-    position: fixed;
-    top: 0;
-    background: rgba(15, 23, 42, 0.8);
-    width: 100%;
-    z-index: 100;
-    padding: 1.5rem;
-    
+.navegacao {
+  position: fixed;
+  top: 0;
+  background: rgba(15, 23, 42, 0.8);
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem;
 }
 
 /* Navigation container */
-.menu{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 3rem;
-
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
 }
 
 /* Navigation link styles */
-.menu-link{
-   text-decoration: none;
-   color: var(--claro);
-   font-weight: 500;
-   position: relative;
-   padding: 0.5rem 0;
+.menu-link {
+  text-decoration: none;
+  color: var(--claro);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
 /* Hover effect for navigation links */
-.menu-link::after{
-    content: '';
-    height: 2px;
-    width: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-    transition: width 0.5s ease;
+.menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+  transition: width 0.5s ease;
 }
 
 /* Active link effect */
 .menu-link:hover::after {
-   width: 100%;
-    
+  width: 100%;
 }
 
 /* Header section */
-.cabecalho{
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+.cabecalho {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Profile picture */
-.foto-perfil{
+.foto-perfil {
   width: 350px;
   height: 350px;
   box-shadow: 0 0 20px rgb(79, 70, 229, 0.3);
-   border-radius: 50%;
-   border: 4px solid var(--vidro);
-   animation: flutuar 5s ease-in-out infinite;
+  border-radius: 50%;
+  border: 4px solid var(--vidro);
+  animation: flutuar 5s ease-in-out infinite;
 }
 
 /* Header title */
@@ -103,28 +97,25 @@ h1 {
   color: var(--primaria);
   font-weight: bold;
   margin: 20px;
-
 }
 
 /* Header subtitle */
 .cabecalho-sub-titulo {
-   font-size: 1.5rem;
-   color: var(--claro);
+  font-size: 1.5rem;
+  color: var(--claro);
 }
 
 /* Button styles */
 .sobre {
   padding: 6rem 2rem;
-   
 }
 
 /* About section title */
 .sobre-titulo {
-   font-size: 3rem;
-   color: var(--claro);
-text-align: center;
-margin-bottom: 20px;
-
+  font-size: 3rem;
+  color: var(--claro);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* About section subtitle */
@@ -146,8 +137,6 @@ margin-bottom: 20px;
 
 /* Projects section */
 .projetos {
-  display: flex;
-  flex-wrap: wrap;
   padding: 6rem 2rem;
 }
 
@@ -159,10 +148,9 @@ margin-bottom: 20px;
 }
 
 /* Caixa de projetos */
-.projetos-card:hover{
+.projetos-card:hover {
   box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
   transform: translateY(-10px) scale(1.03);
-
 }
 
 /* Imagem do projeto */
@@ -170,8 +158,6 @@ margin-bottom: 20px;
   height: 200px;
   width: 100%;
   object-fit: cover;
- 
-  
 }
 
 /* Card do projeto */
@@ -183,9 +169,7 @@ margin-bottom: 20px;
   overflow: hidden;
   transition: all 0.5s ease;
   cursor: pointer;
- 
 }
-
 
 /* Título do projeto */
 .projetos-caixa {
@@ -194,7 +178,6 @@ margin-bottom: 20px;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
 /* Caixa de informações do projeto */
@@ -210,13 +193,12 @@ margin-bottom: 20px;
 
 /* Título do projeto */
 .caixa-textos-projeto {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 /* Seção de contatos */
 .contatos {
   padding: 6rem 2rem;
-  
 }
 
 /* Título da seção de contatos */
@@ -244,23 +226,18 @@ margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   color: var(--claro);
-  border: 1px solid  var(--vidro);
+  border: 1px solid var(--vidro);
   outline: none;
-
 }
 
 /* Efeitos do campo de formulário */
 .campo-form:focus {
-
-  
-
   border-color: var(--secundaria);
   box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
 }
 
 /* Grupos de campos do formulário */
 .grupo-form {
-  
   margin-bottom: 1.5rem;
 }
 
@@ -280,8 +257,7 @@ margin-bottom: 20px;
 /* Efeitos do botão */
 .botao-form:hover {
   transform: translateY(-4px);
-  box-shadow: 0 5px 15px  rgba(79, 70, 229, 0.4);
-  
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
 /* Animação de partículas */
@@ -292,15 +268,19 @@ margin-bottom: 20px;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: 
-  radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-  radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-  var(--maisescuro);
+  background: radial-gradient(
+      circle at 10% 20%,
+      var(--primaria) 0%,
+      transparent 20%
+    ),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--maisescuro);
 }
 
 /* Animação de flutuação */
 @keyframes flutuar {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -309,12 +289,12 @@ margin-bottom: 20px;
 }
 
 .linguagens {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;  
-    
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
 }
 
 .linguagens img {
@@ -335,8 +315,8 @@ margin-bottom: 20px;
   transform: translateY(-8px) scale(1.05);
 }
 .linguagens img {
-    object-fit: contain;
-      padding: 2rem;
+  object-fit: contain;
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 16px;
@@ -348,7 +328,7 @@ margin-bottom: 20px;
   font-size: 2rem;
   color: var(--primaria);
   margin-bottom: 20px;
-   text-align: center;
+  text-align: center;
 }
 
 .projetos-card a {
