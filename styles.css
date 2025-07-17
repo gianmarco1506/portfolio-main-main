@@ -146,6 +146,8 @@ margin-bottom: 20px;
 
 /* Projects section */
 .projetos {
+  display: flex;
+  flex-wrap: wrap;
   padding: 6rem 2rem;
 }
 
